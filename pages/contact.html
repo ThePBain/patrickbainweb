@@ -3,74 +3,88 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Contact | Patrick Bain Web Services</title>
-  <meta name="description" content="Contact Patrick Bain Web Services to discuss a website project, request a quote, or ask a question." />
-  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Request a quote for a professional small business website. Share what you do, your goal, and your timeline. Response is typically fast." />
+
+  <meta property="og:title" content="Contact | Patrick Bain Web Services" />
+  <meta property="og:description" content="Request a quote. Clear scope, predictable timeline, and professional finish." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://patrickbainweb.com/pages/contact.html" />
+
+  <link rel="canonical" href="https://patrickbainweb.com/pages/contact.html" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link rel="icon" href="data:," />
+  <script defer src="../assets/js/main.js"></script>
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Go to homepage">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>
-          <div class="brand-name">Patrick Bain Web Services</div>
-          <div class="brand-sub">Websites for small businesses</div>
-        </span>
+      <a class="brand" href="../index.html" aria-label="Patrick Bain Web Services home">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <strong>Patrick Bain Web Services</strong>
+          <span>Websites for small businesses</span>
+        </div>
       </a>
 
-      <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">☰</button>
-
-      <nav class="nav" data-nav aria-label="Primary navigation">
-        <a href="../index.html" data-nav-link>Home</a>
-        <a href="services.html" data-nav-link>Services</a>
-        <a href="maintenance.html" data-nav-link>Maintenance</a>
-        <a href="contact.html" data-nav-link aria-current="page">Contact</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+          ☰
+        </button>
+        <ul class="nav-list" id="primary-nav" data-nav-list>
+          <li><a href="../index.html" data-nav-link>Home</a></li>
+          <li><a href="services.html" data-nav-link>Services</a></li>
+          <li><a href="maintenance.html" data-nav-link>Maintenance</a></li>
+          <li><a href="contact.html" data-nav-link>Contact</a></li>
+        </ul>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-primary" href="contact.html">Contact</a>
+        <a class="btn primary" href="contact.html">Request a quote</a>
       </div>
     </div>
   </header>
 
-  <main id="main">
-    <section class="page-title">
+  <main id="content" class="page">
+    <section class="section">
       <div class="container">
-        <h1>Contact</h1>
-        <p>
+        <h1 class="page-title">Contact</h1>
+        <p class="page-lead">
           Share a short description of your business and what you want the website to accomplish.
           I will respond as soon as possible.
         </p>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="grid-2">
-          <div class="card">
-            <h3>Send a message</h3>
+        <div class="form-grid mt-24">
+          <div class="card pad">
+            <h2 class="card-title">Send a message</h2>
 
-            <div class="notice" data-form-status>
+            <div class="note mt-10">
               If the form does not work, email me directly at
               <a href="mailto:contact@patrickbainweb.com">contact@patrickbainweb.com</a>.
             </div>
 
-            <form class="form" data-formspree
+            <!-- IMPORTANT:
+                 Replace the action URL below with your Formspree endpoint.
+                 Example: https://formspree.io/f/abcdwxyz
+            -->
+            <form
+              data-contact-form
               action="https://formspree.io/f/xlgegapk"
-              method="POST">
+              method="POST"
+              class="mt-14"
+            >
+              <!-- Honeypot field for spam bots (should stay hidden) -->
+              <input type="text" name="company_website" autocomplete="off" tabindex="-1" style="position:absolute; left:-9999px;" />
 
-              <!-- Honeypot field (anti-spam) -->
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-
-              <div class="form-row">
+              <div class="split">
                 <div class="field">
                   <label for="name">Name</label>
                   <input id="name" name="name" type="text" required />
                 </div>
+
                 <div class="field">
                   <label for="email">Email</label>
                   <input id="email" name="email" type="email" required />
@@ -85,36 +99,39 @@
               <div class="field">
                 <label for="goal">What do you want the website to do?</label>
                 <select id="goal" name="goal" required>
-                  <option value="" selected disabled>Select one</option>
-                  <option>More calls or inquiries</option>
-                  <option>Online booking</option>
-                  <option>Payments or deposits</option>
-                  <option>Professional credibility</option>
-                  <option>Update an existing website</option>
+                  <option value="" selected>Select one</option>
+                  <option>Look more professional (credibility)</option>
+                  <option>Get more calls or inquiries</option>
+                  <option>Generate leads (quote requests)</option>
+                  <option>Support booking or scheduling</option>
+                  <option>Sell products or take payments</option>
+                  <option>Update or rebuild an existing site</option>
                 </select>
               </div>
 
               <div class="field">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="message" required placeholder="What do you do, what do you want the site to accomplish, and any timeline expectations?"></textarea>
               </div>
 
-              <button class="btn btn-primary" type="submit">Send Message</button>
+              <button class="btn primary full" type="submit">Send message</button>
+
+              <div class="form-status" data-form-status aria-live="polite"></div>
             </form>
           </div>
 
-          <div class="card">
-            <h3>Direct contact</h3>
-            <p>
+          <aside class="card pad">
+            <h2 class="card-title">Direct contact</h2>
+            <p class="card-sub">
               Email: <a href="mailto:contact@patrickbainweb.com">contact@patrickbainweb.com</a>
             </p>
-            <p style="margin-top: 10px;">
-              If you have an existing website, you can include the link in your message and tell me what is not working.
+            <p class="card-sub mt-10">
+              If you have an existing website, include the link in your message and tell me what is not working.
             </p>
 
-            <hr class="sep" />
+            <hr class="hr" />
 
-            <h3>What to include</h3>
+            <h3 class="card-title">What to include</h3>
             <ul>
               <li>What your business does</li>
               <li>Your primary goal (calls, booking, payments, credibility)</li>
@@ -122,42 +139,37 @@
               <li>Timeline expectations (optional)</li>
             </ul>
 
-            <hr class="sep" />
-
-            <div class="notice">
+            <div class="note mt-18">
               Response times vary based on workload, but I aim to respond quickly.
             </div>
-          </div>
+          </aside>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-title">Patrick Bain Web Services</div>
-          <div class="footer-muted">Professional websites for small businesses.</div>
-          <div class="footer-muted">Contact: <a href="mailto:contact@patrickbainweb.com">contact@patrickbainweb.com</a></div>
-        </div>
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">Patrick Bain Web Services</div>
+        <div class="muted">Professional websites for small businesses.</div>
+        <div class="mt-10 muted">Contact: <a href="mailto:contact@patrickbainweb.com">contact@patrickbainweb.com</a></div>
 
-        <div class="footer-links">
-          <a href="services.html">Services</a>
-          <a href="maintenance.html">Maintenance</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+        <div class="smallprint">
+          © 2025 Patrick Bain Web Services. All rights reserved.<br />
+          Independent web services.
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>© <span data-year></span> Patrick Bain Web Services. All rights reserved.</div>
-        <div class="smallprint">Built by Patrick Bain Web Services</div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="services.html">Services</a>
+        <a href="maintenance.html">Maintenance</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
     </div>
   </footer>
-
-  <script src="../assets/js/main.js"></script>
 </body>
 </html>

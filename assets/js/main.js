@@ -1,92 +1,107 @@
-// Patrick Bain Web Services - Core JS
+/* =========================
+   Patrick Bain Web Services
+   main.js
+   ========================= */
 
 (function () {
-  const navToggle = document.querySelector('[data-nav-toggle]');
-  const nav = document.querySelector('[data-nav]');
-  const yearEl = document.querySelector('[data-year]');
+  // Mobile nav toggle
+  const toggle = document.querySelector("[data-nav-toggle]");
+  const navList = document.querySelector("[data-nav-list]");
 
-  if (yearEl) {
-    yearEl.textContent = String(new Date().getFullYear());
-  }
-
-  if (navToggle && nav) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  if (toggle && navList) {
+    toggle.addEventListener("click", () => {
+      const isOpen = navList.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Close nav when clicking a link (mobile)
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        if (nav.classList.contains('open')) {
-          nav.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
+    // Close menu on link click (mobile)
+    navList.addEventListener("click", (e) => {
+      const a = e.target.closest("a");
+      if (!a) return;
+      navList.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
     });
   }
 
-  // Active nav highlighting (fallback when aria-current not hardcoded)
-  const path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('nav a[data-nav-link]').forEach(a => {
-    const href = a.getAttribute('href') || '';
-    const hrefFile = href.split('/').pop();
-    if (hrefFile === path) {
-      a.setAttribute('aria-current', 'page');
+  // Active nav highlighting based on current path
+  const path = window.location.pathname.replace(/\/+$/, "");
+  const navLinks = document.querySelectorAll("[data-nav-link]");
+  navLinks.forEach((link) => {
+    try {
+      const href = link.getAttribute("href");
+      if (!href) return;
+
+      // Normalize relative href to a path-like string
+      const testUrl = new URL(href, window.location.href);
+      const testPath = testUrl.pathname.replace(/\/+$/, "");
+
+      if (testPath === path) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      }
+    } catch {
+      // Ignore bad URLs
     }
   });
 
-  // Formspree AJAX submit (optional progressive enhancement)
-  const form = document.querySelector('[data-formspree]');
+  // Contact form handling (Formspree)
+  const form = document.querySelector("[data-contact-form]");
   if (form) {
-    form.addEventListener('submit', async (e) => {
-      // If no Formspree action set, let normal submit happen
-      const action = form.getAttribute('action');
-      if (!action || !action.includes('formspree.io')) return;
+    const status = document.querySelector("[data-form-status]");
+    const submitBtn = form.querySelector("button[type='submit']");
 
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const status = document.querySelector('[data-form-status]');
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const formData = new FormData(form);
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+      }
+
+      if (status) {
+        status.className = "form-status";
+        status.textContent = "";
+      }
 
       try {
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'Sending...';
+        const formData = new FormData(form);
+
+        // Basic honeypot spam check
+        const botField = formData.get("company_website");
+        if (botField && String(botField).trim().length > 0) {
+          throw new Error("Spam detected.");
         }
 
-        const res = await fetch(action, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: formData
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
         });
 
-        if (res.ok) {
-          if (status) {
-            status.className = 'notice success';
-            status.textContent = 'Message sent. I will get back to you soon.';
-          }
-          form.reset();
-        } else {
-          const data = await res.json().catch(() => null);
-          const msg = data && data.errors && data.errors[0] && data.errors[0].message
-            ? data.errors[0].message
-            : 'Something went wrong. Please email me directly.';
-          if (status) {
-            status.className = 'notice error';
-            status.textContent = msg;
-          }
+        if (!res.ok) {
+          throw new Error("Form submission failed.");
         }
-      } catch {
+
+        form.reset();
+
         if (status) {
-          status.className = 'notice error';
-          status.textContent = 'Network error. Please email me directly.';
+          status.classList.add("success");
+          status.textContent = "Message sent. I will get back to you as soon as possible.";
         }
-      } finally {
+
+        if (submitBtn) {
+          submitBtn.textContent = "Sent";
+        }
+      } catch (err) {
+        if (status) {
+          status.classList.add("error");
+          status.textContent = "Something went wrong. Please email contact@patrickbainweb.com.";
+        }
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Send Message';
+          submitBtn.textContent = "Send message";
         }
       }
     });

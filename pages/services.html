@@ -3,95 +3,96 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services | Patrick Bain Web Services</title>
-  <meta name="description" content="Service packages for small business websites, including build options and professional delivery standards." />
-  <meta name="robots" content="index,follow" />
+
+  <title>Service Packages | Patrick Bain Web Services</title>
+  <meta name="description" content="Website packages designed around business outcomes: credibility, clarity, and customer conversion. Transparent pricing and clear scope." />
+
+  <meta property="og:title" content="Service Packages | Patrick Bain Web Services" />
+  <meta property="og:description" content="Transparent website packages for small businesses. Clear scope, predictable timelines, and conversion-focused structure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://patrickbainweb.com/pages/services.html" />
+
+  <link rel="canonical" href="https://patrickbainweb.com/pages/services.html" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link rel="icon" href="data:," />
+  <script defer src="../assets/js/main.js"></script>
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Go to homepage">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>
-          <div class="brand-name">Patrick Bain Web Services</div>
-          <div class="brand-sub">Websites for small businesses</div>
-        </span>
+      <a class="brand" href="../index.html" aria-label="Patrick Bain Web Services home">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <strong>Patrick Bain Web Services</strong>
+          <span>Websites for small businesses</span>
+        </div>
       </a>
 
-      <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">☰</button>
-
-      <nav class="nav" data-nav aria-label="Primary navigation">
-        <a href="../index.html" data-nav-link>Home</a>
-        <a href="services.html" data-nav-link aria-current="page">Services</a>
-        <a href="maintenance.html" data-nav-link>Maintenance</a>
-        <a href="contact.html" data-nav-link>Contact</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+          ☰
+        </button>
+        <ul class="nav-list" id="primary-nav" data-nav-list>
+          <li><a href="../index.html" data-nav-link>Home</a></li>
+          <li><a href="services.html" data-nav-link>Services</a></li>
+          <li><a href="maintenance.html" data-nav-link>Maintenance</a></li>
+          <li><a href="contact.html" data-nav-link>Contact</a></li>
+        </ul>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-primary" href="contact.html">Contact</a>
+        <a class="btn primary" href="contact.html">Request a quote</a>
       </div>
     </div>
   </header>
 
-  <main id="main">
-    <section class="page-title">
-      <div class="container">
-        <h1>Service Packages</h1>
-        <p>
-          Packages are designed around business outcomes, not technical implementation.
-          Pricing is confirmed before work begins, and scope stays clear throughout the project.
-        </p>
-      </div>
-    </section>
-
+  <main id="content" class="page">
     <section class="section">
       <div class="container">
-        <div class="card">
+        <h1 class="page-title">Service Packages</h1>
+        <p class="page-lead">
+          Packages are designed around business outcomes, not technical implementation. Pricing is confirmed before work begins,
+          and scope stays clear throughout the project.
+        </p>
+
+        <div class="card pad mt-24">
           <div class="kicker">Standard deliverables</div>
-          <h3>Included in every package</h3>
+          <h2 class="card-title">Included in every package</h2>
           <ul>
             <li>Mobile-first, responsive design</li>
             <li>Clean visual system and consistent layout</li>
             <li>Basic on-page SEO (page titles and meta descriptions)</li>
-            <li>Analytics installed (client provides necessary access)</li>
+            <li>Analytics installed (client provides necessary access if applicable)</li>
             <li>SSL enabled (hosting dependent)</li>
             <li>Basic performance optimization</li>
             <li>Launch support</li>
           </ul>
         </div>
 
-        <hr class="sep" />
-
-        <div class="pricing-grid">
-          <div class="card price">
-            <div class="price-top">
-              <div>
-                <h3>Starter Website</h3>
-                <div class="badge">1 to 3 pages</div>
-              </div>
-              <div class="amount">$750</div>
+        <div class="price-grid mt-24">
+          <div class="card package hover">
+            <div class="package-head">
+              <h3>Starter Website</h3>
+              <div class="money">$750</div>
             </div>
+            <div class="badge">1 to 3 pages</div>
             <p>For small businesses that need a professional, modern online presence.</p>
             <ul>
               <li>Contact form with email delivery</li>
               <li>Google Maps integration (if relevant)</li>
-              <li>Professional structure and clear calls to action</li>
+              <li>Clear calls to action</li>
             </ul>
-            <div class="footer-muted">Timeline: approximately 7 days</div>
+            <div class="timeline">Timeline: approximately 7 days</div>
           </div>
 
-          <div class="card price">
-            <div class="price-top">
-              <div>
-                <h3>Standard Website</h3>
-                <div class="badge badge-pop">Most common choice</div>
-              </div>
-              <div class="amount">$1,250</div>
+          <div class="card package hover">
+            <div class="package-head">
+              <h3>Standard Website</h3>
+              <div class="money">$1,250</div>
             </div>
+            <div class="badge">Most common choice</div>
             <p>For businesses that want their website to actively bring in customers.</p>
             <ul>
               <li>4 to 6 pages</li>
@@ -101,51 +102,45 @@
               <li>Speed optimization</li>
               <li>Launch support and minor revisions</li>
             </ul>
-            <div class="footer-muted">Timeline: 1 to 2 weeks</div>
+            <div class="timeline">Timeline: 1 to 2 weeks</div>
           </div>
 
-          <div class="card price">
-            <div class="price-top">
-              <div>
-                <h3>Premium Website</h3>
-                <div class="badge">Automation and integrations</div>
-              </div>
-              <div class="amount">$2,000 <small>and up</small></div>
+          <div class="card package hover">
+            <div class="package-head">
+              <h3>Premium Website</h3>
+              <div class="money">$2,000+</div>
             </div>
+            <div class="badge">Automation and integrations</div>
             <p>For businesses that want automation, efficiency, and long-term growth.</p>
             <ul>
               <li>Online booking or payment integration</li>
               <li>Advanced forms or feedback systems</li>
               <li>Light automation (confirmations or follow-ups)</li>
-              <li>Conversion-focused layout decisions</li>
               <li>Priority build timeline</li>
             </ul>
-            <div class="footer-muted">Timeline: 2 to 3 weeks</div>
+            <div class="timeline">Timeline: 2 to 3 weeks</div>
           </div>
         </div>
 
-        <hr class="sep" />
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Revisions</h3>
-            <p>
-              Each package includes one revision round for reasonable changes such as text edits, image swaps,
-              and small layout refinements. Major redesigns, new pages, or new features are quoted separately.
+        <div class="split mt-24">
+          <div class="card pad">
+            <h2 class="card-title">Revisions</h2>
+            <p class="card-sub">
+              Each package includes one revision round for reasonable changes such as text edits, image swaps, and small layout refinements.
+              Major redesigns, new pages, or new features are quoted separately.
             </p>
           </div>
-          <div class="card">
-            <h3>Payment terms</h3>
-            <p>
+
+          <div class="card pad">
+            <h2 class="card-title">Payment terms</h2>
+            <p class="card-sub">
               Standard terms are 50% to begin work and 50% due before launch. Smaller projects may be paid in full upfront.
             </p>
           </div>
         </div>
 
-        <hr class="sep" />
-
-        <div class="card">
-          <h3>What is not included unless quoted</h3>
+        <div class="card pad mt-24">
+          <h2 class="card-title">What is not included unless quoted</h2>
           <ul>
             <li>Professional photography or videography</li>
             <li>Logo design or full brand identity work</li>
@@ -156,14 +151,13 @@
           </ul>
         </div>
 
-        <hr class="sep" />
-
-        <div class="card">
-          <h3>Request a quote</h3>
-          <p>Share a short description of your business and what you want the website to accomplish.</p>
-          <div class="hero-actions" style="margin-top: 12px;">
-            <a class="btn btn-primary" href="contact.html">Contact Me</a>
-            <a class="btn btn-ghost" href="maintenance.html">View Maintenance Plans</a>
+        <div class="card panel mt-24">
+          <h2 class="card-title">Request a quote</h2>
+          <p class="card-sub">Share a short description of your business and what you want the website to accomplish.</p>
+          <div class="hero-actions mt-14">
+            <a class="btn primary" href="contact.html">Request a quote</a>
+            <a class="btn ghost" href="maintenance.html">View maintenance plans</a>
+            <a class="btn ghost" href="how-it-works.html">How it works</a>
           </div>
         </div>
       </div>
@@ -171,30 +165,27 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-title">Patrick Bain Web Services</div>
-          <div class="footer-muted">Professional websites for small businesses.</div>
-          <div class="footer-muted">Contact: <a href="mailto:contact@patrickbainweb.com">contact@patrickbainweb.com</a></div>
-        </div>
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">Patrick Bain Web Services</div>
+        <div class="muted">Professional websites for small businesses.</div>
+        <div class="mt-10 muted">Contact: <a href="mailto:contact@patrickbainweb.com">contact@patrickbainweb.com</a></div>
 
-        <div class="footer-links">
-          <a href="services.html">Services</a>
-          <a href="maintenance.html">Maintenance</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+        <div class="smallprint">
+          © 2025 Patrick Bain Web Services. All rights reserved.<br />
+          Independent web services.
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>© <span data-year></span> Patrick Bain Web Services. All rights reserved.</div>
-        <div class="smallprint">Built by Patrick Bain Web Services</div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="services.html">Services</a>
+        <a href="maintenance.html">Maintenance</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
     </div>
   </footer>
-
-  <script src="../assets/js/main.js"></script>
 </body>
 </html>

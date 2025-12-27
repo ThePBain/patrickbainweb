@@ -3,62 +3,67 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maintenance | Patrick Bain Web Services</title>
-  <meta name="description" content="Website maintenance plans to keep your site secure, fast, and up to date after launch." />
-  <meta name="robots" content="index,follow" />
+
+  <title>Maintenance Plans | Patrick Bain Web Services</title>
+  <meta name="description" content="Ongoing website maintenance plans to keep sites secure, fast, and updated. Predictable monthly support for small businesses." />
+
+  <meta property="og:title" content="Maintenance Plans | Patrick Bain Web Services" />
+  <meta property="og:description" content="Ongoing updates, backups, monitoring, and small changes handled for you. Monthly maintenance options available." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://patrickbainweb.com/pages/maintenance.html" />
+
+  <link rel="canonical" href="https://patrickbainweb.com/pages/maintenance.html" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link rel="icon" href="data:," />
+  <script defer src="../assets/js/main.js"></script>
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Go to homepage">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>
-          <div class="brand-name">Patrick Bain Web Services</div>
-          <div class="brand-sub">Websites for small businesses</div>
-        </span>
+      <a class="brand" href="../index.html" aria-label="Patrick Bain Web Services home">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <strong>Patrick Bain Web Services</strong>
+          <span>Websites for small businesses</span>
+        </div>
       </a>
 
-      <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">☰</button>
-
-      <nav class="nav" data-nav aria-label="Primary navigation">
-        <a href="../index.html" data-nav-link>Home</a>
-        <a href="services.html" data-nav-link>Services</a>
-        <a href="maintenance.html" data-nav-link aria-current="page">Maintenance</a>
-        <a href="contact.html" data-nav-link>Contact</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+          ☰
+        </button>
+        <ul class="nav-list" id="primary-nav" data-nav-list>
+          <li><a href="../index.html" data-nav-link>Home</a></li>
+          <li><a href="services.html" data-nav-link>Services</a></li>
+          <li><a href="maintenance.html" data-nav-link>Maintenance</a></li>
+          <li><a href="contact.html" data-nav-link>Contact</a></li>
+        </ul>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-primary" href="contact.html">Contact</a>
+        <a class="btn primary" href="contact.html">Request a quote</a>
       </div>
     </div>
   </header>
 
-  <main id="main">
-    <section class="page-title">
-      <div class="container">
-        <h1>Maintenance Plans</h1>
-        <p>
-          Websites are not finished at launch. Updates, monitoring, and small changes are expected over time.
-          Maintenance keeps your site secure, reliable, and up to date so you do not have to manage the technical details.
-        </p>
-      </div>
-    </section>
-
+  <main id="content" class="page">
     <section class="section">
       <div class="container">
-        <div class="pricing-grid">
-          <div class="card price">
-            <div class="price-top">
-              <div>
-                <h3>Essential Care</h3>
-                <div class="badge">Stability and security</div>
-              </div>
-              <div class="amount">$50 <small>/ month</small></div>
+        <h1 class="page-title">Maintenance Plans</h1>
+        <p class="page-lead">
+          Websites are not finished at launch. Updates, monitoring, and small changes are expected over time.
+          Maintenance keeps your site secure, reliable, and up to date so you do not have to manage technical details.
+        </p>
+
+        <div class="price-grid mt-24">
+          <div class="card package hover">
+            <div class="package-head">
+              <h3>Essential Care</h3>
+              <div class="money">$50 / month</div>
             </div>
+            <div class="badge">Stability and security</div>
             <p>For clients who want their website kept stable and secure with minimal involvement.</p>
             <ul>
               <li>Software updates (if applicable)</li>
@@ -70,14 +75,12 @@
             </ul>
           </div>
 
-          <div class="card price">
-            <div class="price-top">
-              <div>
-                <h3>Growth Care</h3>
-                <div class="badge badge-pop">Most common choice</div>
-              </div>
-              <div class="amount">$100 <small>/ month</small></div>
+          <div class="card package hover">
+            <div class="package-head">
+              <h3>Growth Care</h3>
+              <div class="money">$100 / month</div>
             </div>
+            <div class="badge">Most common choice</div>
             <p>For clients who want ongoing support and light optimization.</p>
             <ul>
               <li>Everything in Essential Care</li>
@@ -89,14 +92,12 @@
             </ul>
           </div>
 
-          <div class="card price">
-            <div class="price-top">
-              <div>
-                <h3>Premium Care</h3>
-                <div class="badge">Continuous improvement</div>
-              </div>
-              <div class="amount">$200 <small>/ month</small></div>
+          <div class="card package hover">
+            <div class="package-head">
+              <h3>Premium Care</h3>
+              <div class="money">$200 / month</div>
             </div>
+            <div class="badge">Continuous improvement</div>
             <p>For clients who want proactive optimization and growth-focused updates.</p>
             <ul>
               <li>Everything in Growth Care</li>
@@ -109,12 +110,10 @@
           </div>
         </div>
 
-        <hr class="sep" />
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Definition of small changes</h3>
-            <p>Small changes typically include:</p>
+        <div class="split mt-24">
+          <div class="card pad">
+            <h2 class="card-title">Definition of small changes</h2>
+            <p class="card-sub">Small changes typically include:</p>
             <ul>
               <li>Text edits</li>
               <li>Replacing images</li>
@@ -122,26 +121,26 @@
               <li>Minor layout adjustments within an existing section</li>
             </ul>
           </div>
-          <div class="card">
-            <h3>Scope and boundaries</h3>
-            <p>
-              Maintenance does not include major redesigns, new pages, or new feature builds.
-              Larger requests are quoted separately. Response time and scope depend on the plan level.
+
+          <div class="card pad">
+            <h2 class="card-title">Scope and boundaries</h2>
+            <p class="card-sub">
+              Maintenance does not include major redesigns, new pages, or new feature builds. Larger requests are quoted separately.
+              Response time and scope depend on the plan level.
             </p>
-            <p style="margin-top: 10px;">
+            <p class="card-sub mt-10">
               Maintenance can be canceled with notice, but is recommended for long-term reliability.
             </p>
           </div>
         </div>
 
-        <hr class="sep" />
-
-        <div class="card">
-          <h3>Interested in maintenance?</h3>
-          <p>Maintenance can be added after launch or at any time.</p>
-          <div class="hero-actions" style="margin-top: 12px;">
-            <a class="btn btn-primary" href="contact.html">Contact Me</a>
-            <a class="btn btn-ghost" href="services.html">View Service Packages</a>
+        <div class="card panel mt-24">
+          <h2 class="card-title">Interested in maintenance?</h2>
+          <p class="card-sub">Maintenance can be added after launch or at any time.</p>
+          <div class="hero-actions mt-14">
+            <a class="btn primary" href="contact.html">Request a quote</a>
+            <a class="btn ghost" href="services.html">View service packages</a>
+            <a class="btn ghost" href="how-it-works.html">How it works</a>
           </div>
         </div>
       </div>
@@ -149,30 +148,27 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-title">Patrick Bain Web Services</div>
-          <div class="footer-muted">Professional websites for small businesses.</div>
-          <div class="footer-muted">Contact: <a href="mailto:contact@patrickbainweb.com">contact@patrickbainweb.com</a></div>
-        </div>
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">Patrick Bain Web Services</div>
+        <div class="muted">Professional websites for small businesses.</div>
+        <div class="mt-10 muted">Contact: <a href="mailto:contact@patrickbainweb.com">contact@patrickbainweb.com</a></div>
 
-        <div class="footer-links">
-          <a href="services.html">Services</a>
-          <a href="maintenance.html">Maintenance</a>
-          <a href="contact.html">Contact</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+        <div class="smallprint">
+          © 2025 Patrick Bain Web Services. All rights reserved.<br />
+          Independent web services.
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>© <span data-year></span> Patrick Bain Web Services. All rights reserved.</div>
-        <div class="smallprint">Built by Patrick Bain Web Services</div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="services.html">Services</a>
+        <a href="maintenance.html">Maintenance</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
     </div>
   </footer>
-
-  <script src="../assets/js/main.js"></script>
 </body>
 </html>

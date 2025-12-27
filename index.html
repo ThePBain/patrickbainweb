@@ -3,20 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Patrick Bain Web Services | Modern Websites for Small Businesses</title>
-  <meta name="description" content="Patrick Bain Web Services builds clean, modern websites for small businesses. Professional design, fast performance, and reliable ongoing support." />
-  <meta name="robots" content="index,follow" />
 
+  <title>Patrick Bain Web Services | Clean, modern websites for small businesses</title>
+  <meta name="description" content="Professional websites for small businesses. Clear messaging, fast performance, and a straightforward build process. Request a quote today." />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Patrick Bain Web Services" />
-  <meta property="og:description" content="Clean, modern websites for small businesses, built to look credible, load fast, and convert visitors into inquiries." />
+  <meta property="og:description" content="Clean, modern websites for small businesses. Clear messaging, fast performance, straightforward delivery." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://patrickbainweb.com/" />
+  <!-- Optional: add an image later -->
+  <!-- <meta property="og:image" content="https://patrickbainweb.com/assets/img/og.png" /> -->
 
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="canonical" href="https://patrickbainweb.com/" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" href="data:," />
+  <script defer src="assets/js/main.js"></script>
 
-  <!-- Analytics (optional): paste your GA Measurement ID below -->
-  <!--
+  <!-- Optional: Analytics (add later if desired)
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -26,53 +31,56 @@
   </script>
   -->
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#content">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Go to homepage">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>
-          <div class="brand-name">Patrick Bain Web Services</div>
-          <div class="brand-sub">Websites for small businesses</div>
-        </span>
+      <a class="brand" href="index.html" aria-label="Patrick Bain Web Services home">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <strong>Patrick Bain Web Services</strong>
+          <span>Websites for small businesses</span>
+        </div>
       </a>
 
-      <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">
-        ☰
-      </button>
-
-      <nav class="nav" data-nav aria-label="Primary navigation">
-        <a href="index.html" data-nav-link aria-current="page">Home</a>
-        <a href="pages/services.html" data-nav-link>Services</a>
-        <a href="pages/maintenance.html" data-nav-link>Maintenance</a>
-        <a href="pages/contact.html" data-nav-link>Contact</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+          ☰
+        </button>
+        <ul class="nav-list" id="primary-nav" data-nav-list>
+          <li><a href="index.html" data-nav-link>Home</a></li>
+          <li><a href="pages/services.html" data-nav-link>Services</a></li>
+          <li><a href="pages/maintenance.html" data-nav-link>Maintenance</a></li>
+          <li><a href="pages/contact.html" data-nav-link>Contact</a></li>
+        </ul>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-primary" href="pages/contact.html">Contact</a>
+        <a class="btn primary" href="pages/contact.html">Request a quote</a>
       </div>
     </div>
   </header>
 
-  <main id="main">
+  <main id="content" class="page">
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <div class="kicker">Professional. Fast. Reliable.</div>
           <h1>Clean, modern websites for small businesses.</h1>
-          <p class="lead">
+          <p>
             I build websites designed to look credible, load fast, and make it easy for customers to get in touch.
             Patrick Bain Web Services handles the technical side so business owners do not have to.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="pages/contact.html">Contact Me</a>
-            <a class="btn btn-ghost" href="pages/services.html">View Services</a>
+            <a class="btn primary" href="pages/contact.html">Request a quote</a>
+            <a class="btn ghost" href="pages/services.html">View services</a>
+            <a class="btn ghost" href="pages/how-it-works.html">How it works</a>
           </div>
 
-          <div class="pills" aria-label="Highlights">
+          <div class="pills" aria-label="Key features">
             <span class="pill">Mobile-first</span>
             <span class="pill">Performance-focused</span>
             <span class="pill">Clear packages</span>
@@ -80,16 +88,16 @@
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="What to expect">
-          <h3>What you get</h3>
-          <p>
+        <aside class="card pad hover">
+          <h2 class="card-title">What you get</h2>
+          <p class="card-sub">
             A professional website that communicates clearly and turns visitors into inquiries.
             Straightforward process, predictable timelines, and clean execution.
           </p>
-          <hr class="sep" />
-          <h3>Best fit</h3>
-          <p>
-            Small businesses that want a reliable site without managing the technical details.
+          <hr class="hr" />
+          <h3 class="card-title">Best fit</h3>
+          <p class="card-sub">
+            Small businesses that want a reliable site without managing technical details.
           </p>
         </aside>
       </div>
@@ -103,19 +111,26 @@
           and make contacting you feel simple. I focus on websites that are professional, restrained, and effective.
         </p>
 
-        <div class="grid-3">
-          <div class="card">
-            <h3>Clear messaging</h3>
-            <p>Visitors should understand your business in seconds, without digging.</p>
+        <div class="grid-3 mt-18">
+          <div class="card feature hover">
+            <strong>Clear messaging</strong>
+            <span>Visitors should understand your business in seconds, without digging.</span>
           </div>
-          <div class="card">
-            <h3>Conversion-focused</h3>
-            <p>Strong calls to action that guide customers toward contacting or booking.</p>
+          <div class="card feature hover">
+            <strong>Conversion-focused</strong>
+            <span>Strong calls to action that guide customers toward contacting or booking.</span>
           </div>
-          <div class="card">
-            <h3>Reliable delivery</h3>
-            <p>Fast load times, mobile-first layouts, and clean implementation.</p>
+          <div class="card feature hover">
+            <strong>Reliable delivery</strong>
+            <span>Fast load times, mobile-first layouts, and clean implementation.</span>
           </div>
+        </div>
+
+        <div class="card panel mt-24">
+          <h3>About this studio</h3>
+          <p>
+            Patrick Bain Web Services is an independent web studio focused on building clear, reliable websites for small businesses.
+          </p>
         </div>
       </div>
     </section>
@@ -124,57 +139,104 @@
       <div class="container">
         <h2>Services</h2>
         <p>
-          Packages are structured around real business needs. Whether you need a straightforward presence or a more advanced site
-          with booking or payments, the goal stays the same: credibility, clarity, and results.
+          Packages are structured around real business needs. Whether you need a straightforward presence or a more advanced site with booking
+          or payments, the goal stays the same: credibility, clarity, and results.
         </p>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3>Website packages</h3>
-            <p>Clear scope, predictable timeline, and a professional finish.</p>
-            <div class="hero-actions" style="margin-top: 12px;">
-              <a class="btn btn-primary" href="pages/services.html">View Service Packages</a>
-            </div>
+        <div class="split mt-18">
+          <div class="card action-card hover">
+            <h3 class="card-title">Website packages</h3>
+            <p class="card-sub">Clear scope, predictable timeline, and a professional finish.</p>
+            <a class="btn primary" href="pages/services.html">View service packages</a>
           </div>
-          <div class="card">
-            <h3>Ongoing maintenance</h3>
-            <p>Updates, backups, monitoring, and small changes handled for you.</p>
-            <div class="hero-actions" style="margin-top: 12px;">
-              <a class="btn btn-ghost" href="pages/maintenance.html">View Maintenance Plans</a>
-            </div>
+
+          <div class="card action-card hover">
+            <h3 class="card-title">Ongoing maintenance</h3>
+            <p class="card-sub">Updates, backups, monitoring, and small changes handled for you.</p>
+            <a class="btn primary" href="pages/maintenance.html">View maintenance plans</a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <hr class="sep" />
-
+    <section class="section">
+      <div class="container">
         <h2>Process</h2>
-        <p>
-          Working together is structured and straightforward.
-        </p>
+        <p>Working together is structured and straightforward.</p>
+        <p class="muted2">You will always know what stage your project is in and what comes next.</p>
 
-        <div class="grid-3">
-          <div class="card">
-            <h3>1. Discuss</h3>
+        <div class="process-grid mt-18">
+          <div class="card step hover">
+            <div class="num">1</div>
+            <h3>Discuss</h3>
             <p>We clarify goals, priorities, and required features.</p>
           </div>
-          <div class="card">
-            <h3>2. Build</h3>
+          <div class="card step hover">
+            <div class="num">2</div>
+            <h3>Build</h3>
             <p>I design and develop the website with clear checkpoints.</p>
           </div>
-          <div class="card">
-            <h3>3. Launch and support</h3>
+          <div class="card step hover">
+            <div class="num">3</div>
+            <h3>Launch and support</h3>
             <p>The site goes live, and maintenance is available for ongoing care.</p>
           </div>
         </div>
 
-        <hr class="sep" />
-
-        <div class="card">
+        <div class="card panel mt-24">
           <h3>Ready to get started?</h3>
           <p>If you want a professional website without the technical hassle, contact me to discuss your project or request a quote.</p>
-          <div class="hero-actions" style="margin-top: 12px;">
-            <a class="btn btn-primary" href="pages/contact.html">Contact Me</a>
-            <a class="btn btn-ghost" href="pages/services.html">See Pricing</a>
+          <div class="hero-actions mt-14">
+            <a class="btn primary" href="pages/contact.html">Request a quote</a>
+            <a class="btn ghost" href="pages/services.html">View services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Example projects</h2>
+        <p>
+          If you want a preview of how I structure a clean, conversion-focused site, these examples show typical approaches.
+          These are demo concepts built to represent common small business needs.
+        </p>
+
+        <div class="grid-3 mt-18">
+          <div class="card pad hover">
+            <h3 class="card-title">Local service business</h3>
+            <p class="card-sub">Clear offer, service area, trust cues, and a simple quote request flow.</p>
+            <hr class="hr" />
+            <p class="muted2">
+              Focus: clarity, calls, contact conversion, mobile-first layout.
+            </p>
+          </div>
+
+          <div class="card pad hover">
+            <h3 class="card-title">Professional services landing</h3>
+            <p class="card-sub">Credibility-first layout with testimonials, process, and direct inquiry.</p>
+            <hr class="hr" />
+            <p class="muted2">
+              Focus: positioning, authority, lead capture, fast navigation.
+            </p>
+          </div>
+
+          <div class="card pad hover">
+            <h3 class="card-title">Booking-focused business</h3>
+            <p class="card-sub">A site built around scheduling, availability, and a structured booking flow.</p>
+            <hr class="hr" />
+            <p class="muted2">
+              Focus: booking conversion, reduced friction, clear next steps.
+            </p>
+          </div>
+        </div>
+
+        <div class="card panel mt-24">
+          <h3>Want something similar for your business?</h3>
+          <p>Tell me what you do and what you want the website to accomplish. I will recommend the best package.</p>
+          <div class="hero-actions mt-14">
+            <a class="btn primary" href="pages/contact.html">Request a quote</a>
+            <a class="btn ghost" href="pages/how-it-works.html">How it works</a>
           </div>
         </div>
       </div>
@@ -182,30 +244,27 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-title">Patrick Bain Web Services</div>
-          <div class="footer-muted">Professional websites for small businesses.</div>
-          <div class="footer-muted">Contact: <a href="mailto:contact@patrickbainweb.com">contact@patrickbainweb.com</a></div>
-        </div>
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">Patrick Bain Web Services</div>
+        <div class="muted">Professional websites for small businesses.</div>
+        <div class="mt-10 muted">Contact: <a href="mailto:contact@patrickbainweb.com">contact@patrickbainweb.com</a></div>
 
-        <div class="footer-links">
-          <a href="pages/services.html">Services</a>
-          <a href="pages/maintenance.html">Maintenance</a>
-          <a href="pages/contact.html">Contact</a>
-          <a href="pages/privacy.html">Privacy Policy</a>
-          <a href="pages/terms.html">Terms of Service</a>
+        <div class="smallprint">
+          © 2025 Patrick Bain Web Services. All rights reserved.<br />
+          Independent web services.
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>© <span data-year></span> Patrick Bain Web Services. All rights reserved.</div>
-        <div class="smallprint">Built by Patrick Bain Web Services</div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="pages/services.html">Services</a>
+        <a href="pages/maintenance.html">Maintenance</a>
+        <a href="pages/how-it-works.html">How it works</a>
+        <a href="pages/contact.html">Contact</a>
+        <a href="pages/privacy.html">Privacy Policy</a>
+        <a href="pages/terms.html">Terms of Service</a>
       </div>
     </div>
   </footer>
-
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
